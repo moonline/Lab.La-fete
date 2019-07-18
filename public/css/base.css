@@ -1,0 +1,19 @@
+body {
+	/* Some rights reserved by HerryLawford https://flic.kr/p/9sUH8N */
+	background-image: url("https://live.staticflickr.com/5029/5555367240_a207d57882_b.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+.app {
+	background: rgba(256, 256, 256, 0.6);
+	height: 100%;
+	width: 100%;
+
+	padding: 1rem;
+}

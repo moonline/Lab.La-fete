@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="panel panel-default">
+		<div class="panel-heading">{{ event.getTitle() }}</div>
+		<div class="panel-body">
+			<p>{{ event.getDescription() }}</p>
+			<p><strong>{{ event.getOrganizer() }}</strong></p>
+		</div>
+	</div>
+{% endblock %}
