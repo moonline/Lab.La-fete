@@ -36,10 +36,10 @@ class Event
     private $organizer;
 
 
-    public function __construct($title, $description, $organizer)
+    public function __construct($title, $description, $organizer, $uuidService = Uuid::class)
     {
-        $this->id = Uuid::uuid4();
-        $this->publicId = Uuid::uuid4();
+        $this->id = $uuidService::uuid4();
+        $this->publicId = $uuidService::uuid4();
 
         $this->title = $title;
         $this->description = $description;
