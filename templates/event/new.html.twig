@@ -1,16 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-	<link href="{{ asset('css/event.css') }}" rel="stylesheet"/>
-{% endblock %}
-
 {% block body %}
-	<article class="panel event">
-		<header class="panel-heading">
-			<h2>New Event</h2>
-		</header>
-		<div class="panel-body">
+	{% embed "components/content-article.html.twig" %}
+		{% block title %}
+			New Event
+		{% endblock %}
+
+		{% block content %}
 			{{ form(form) }}
-		</div>
-	</div>
+		{% endblock %}
+	{% endembed %}
 {% endblock %}

@@ -1,0 +1,8 @@
+.email-link {
+	font-size: 0.5em;
+	float: right;
+	padding: 0.5em 1em;
+}
+.email-link:visited, .email-link:link, .email-link:hover {
+	color: white;
+}

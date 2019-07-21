@@ -1,0 +1,8 @@
+{% block stylesheets %}
+	<link href="{{ asset('css/components/email-link.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+<a class="email-link" href="mailto:{% if mail is defined %}{{mail}}{% endif %}?subject={{subject}}&amp;body={{body}}">
+	📧 {{label}}
+</a>
