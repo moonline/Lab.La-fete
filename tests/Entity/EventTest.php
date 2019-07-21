@@ -22,7 +22,7 @@ class EntityTest extends TestCase
 		$event = new Event("A title", "A description", "An organizer", UuidStub::class);
 
         $this->assertEquals(1001, $event->getId());
-        $this->assertEquals(1002, $event->getPublicId());
+        $this->assertEquals(1002, $event->getEditKey());
         $this->assertEquals("A title", $event->getTitle());
         $this->assertEquals("A description", $event->getDescription());
         $this->assertEquals("An organizer", $event->getOrganizer());

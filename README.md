@@ -14,6 +14,9 @@
 	* [ https://sqlitebrowser.org/ ]
 2. Clone source
 3. Install dependencies
+	```bash
+	composer install
+	```
 
 
 ### Create database & test data
@@ -62,5 +65,5 @@ composer test
 
 ## Debugging
 
-https://scotch.io/@chenster/debugging-php-in-visual-studio-code205
-http://www.accella.net/knowledgebase/debugging-php-with-visual-studio-code/
+* https://scotch.io/@chenster/debugging-php-in-visual-studio-code205
+* http://www.accella.net/knowledgebase/debugging-php-with-visual-studio-code/

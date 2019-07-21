@@ -79,6 +79,10 @@
         ],
         "generate-test-data": [
             "./generate_test_data.sh"
+        ],
+        "migrate": [
+            "php bin/console make:migration",
+            "php bin/console doctrine:migrations:migrate"
         ]
     },
     "conflict": {

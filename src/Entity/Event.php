@@ -18,7 +18,7 @@ class Event
     /**
      * @ORM\Column(length=255, nullable=true)
      */
-    private $publicId;
+    private $editKey;
 
     /**
      * @ORM\Column(length=255, nullable=true)
@@ -39,7 +39,7 @@ class Event
     public function __construct($title, $description, $organizer, $uuidService = Uuid::class)
     {
         $this->id = $uuidService::uuid4();
-        $this->publicId = $uuidService::uuid4();
+        $this->editKey = $uuidService::uuid4();
 
         $this->title = $title;
         $this->description = $description;
@@ -52,9 +52,9 @@ class Event
         return $this->id;
     }
         
-    public function getPublicId()
+    public function getEditKey()
     {
-        return $this->publicId;
+        return $this->editKey;
     }
     
     public function getTitle()

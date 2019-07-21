@@ -11,22 +11,12 @@ use App\Entity\Event;
 class EventController extends AbstractController
 {
 	/**
-     * @Route("/events/{publicId}", name="event_show")
+     * @Route("/events/{id}", name="event_show")
      */
-    public function show($publicId)
+    public function show(Event $event)
     {
-        $event = $this->getDoctrine()
-            ->getRepository(Event::class)
-            ->findOneBy([
-                'publicId' => $publicId
-            ]);
-
-        if ($event) {
-            return $this->render('events/show.html.twig', [
-                'event' => $event,
-            ]);
-        } else {
-            throw $this->createNotFoundException('The event does not exist');
-        }
+        return $this->render('events/show.html.twig', [
+            'event' => $event,
+        ]);
     }
 }
