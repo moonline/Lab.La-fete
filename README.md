@@ -2,6 +2,13 @@
 
 ![](documentation/event.png)
 
+
+## Project documentation
+
+* [Architecture, wireframes](https://github.com/moonline/la-fete/wiki)
+* [Issues](https://github.com/moonline/la-fete/issues)
+
+
 ## Development
 
 ### Setup

@@ -6,16 +6,18 @@
 
 .content-article > header {
 	background: rgba(0,0,0,0.5);
-	border-radius: 2px;
+	border-radius: 2px 0;
 }
 .content-article > header > h2 {
 	margin-top: 0.5rem;
 	color: white;
+	text-shadow: 0 0 0.5rem rgb(40,40,40);
 }
 
 .content-article > footer {
 	background: rgba(150,150,150,0.5);
-	border-radius: 2px;
+	border-radius: 0 2px;
+	border: none;
 }
 .content-article > footer > p {
 	font-weight: bold;

@@ -1,3 +1,16 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: event_new
+        permanent: false
+        keepRequestMethod: true
+        keepQueryParams: true
+events:
+    path: /events/
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: event_new
+        permanent: false
+        keepRequestMethod: true
+        keepQueryParams: true
