@@ -1,4 +1,6 @@
 #!/bin/bash
+sqlite3 "var/app.db" "DELETE FROM event";
+sqlite3 "var/app.db" "VACUUM";
 sqlite3 "var/app.db" <<EOF
 INSERT INTO event (id, public_id, title, description, organizer)
 VALUES

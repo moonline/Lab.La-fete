@@ -18,22 +18,37 @@
 
 ### Create database & test data
 
+Migrate database:
 ```bash
 php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 ```
+Insert test records:
 ```bash
-generate_test_data.sh
+composer generate-test-data
+# or
+./generate_test_data.sh
 ```
 
 
 ### Start development server
 
 ```bash
+composer start
+# or
 symfony server:start
 ```
-http://localhost:8000
+Open http://localhost:8000 in a browser
 
+
+### Testing
+
+Run tests:
+```bash
+composer test
+# or
+./bin/phpunit
+```
 
 
 ## Development environment (vs-code)

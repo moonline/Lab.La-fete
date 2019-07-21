@@ -31,6 +31,7 @@
     "require-dev": {
         "symfony/debug-pack": "*",
         "symfony/maker-bundle": "^1.12",
+        "symfony/phpunit-bridge": "^4.3",
         "symfony/profiler-pack": "*",
         "symfony/test-pack": "*",
         "symfony/web-server-bundle": "4.3.*"
@@ -69,6 +70,15 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "test": [
+            "./bin/phpunit"
+        ],
+        "start": [
+            "symfony server:start"
+        ],
+        "generate-test-data": [
+            "./generate_test_data.sh"
         ]
     },
     "conflict": {
