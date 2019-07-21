@@ -1,6 +1,6 @@
 body {
-	/* Some rights reserved by HerryLawford https://flic.kr/p/9sUH8N */
-	background-image: url("https://live.staticflickr.com/5029/5555367240_a207d57882_b.jpg");
+	/* Some rights reserved by Jacek Becela https://flic.kr/p/3qDqCj */
+	background-image: url("https://live.staticflickr.com/2015/1591611426_8d2cedc486_o.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -11,7 +11,7 @@ html, body {
 }
 
 .app {
-	background: rgba(256, 256, 256, 0.6);
+	background: rgba(256, 256, 256, 0.25);
 	height: 100%;
 	width: 100%;
 

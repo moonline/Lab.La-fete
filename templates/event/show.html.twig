@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	<link href="{{ asset('css/event.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+	<article class="panel event">
+		<header class="panel-heading">
+			<h2>
+				{{ event.getTitle() }}
+				<a class="send-link" href="mailto:?subject=You are invited&body=http://events.tld/events/{{ event.getId() }}">📧 Send link</a>
+			</h2>
+		</header>
+		<div class="panel-body">
+			<p>{{ event.getDescription() }}</p>
+		</div>
+		<div class="panel-footer">
+			<p>Organizer: {{ event.getOrganizer() }}<p>
+		</div>
+	</div>
+{% endblock %}

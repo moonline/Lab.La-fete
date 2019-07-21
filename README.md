@@ -1,5 +1,7 @@
 # La Fete Webapp
 
+![](documentation/event.png)
+
 ## Development
 
 ### Setup
@@ -37,8 +39,6 @@ composer generate-test-data
 ### Start development server
 
 ```bash
-composer start
-# or
 symfony server:start
 ```
 Open http://localhost:8000 in a browser

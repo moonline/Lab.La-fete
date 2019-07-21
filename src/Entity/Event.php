@@ -36,7 +36,7 @@ class Event
     private $organizer;
 
 
-    public function __construct($title, $description, $organizer, $uuidService = Uuid::class)
+    public function __construct($title = "", $description = "", $organizer = "", $uuidService = Uuid::class)
     {
         $this->id = $uuidService::uuid4();
         $this->editKey = $uuidService::uuid4();
