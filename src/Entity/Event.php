@@ -3,6 +3,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Ramsey\Uuid\Uuid;
+use Michelf\Markdown;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EventRepository")
@@ -71,6 +72,10 @@ class Event
     public function getDescription()
     {
         return $this->description;
+    }
+
+    public function getFormattedDescription() {
+        return Markdown::defaultTransform($this->description);
     }
     
     public function setDescription($description)

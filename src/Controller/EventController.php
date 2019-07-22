@@ -24,7 +24,10 @@ class EventController extends AbstractController
 
         $form = $this->createFormBuilder($event)
             ->add('title', TextType::class)
-            ->add('description', TextareaType::class)
+            ->add('description', TextareaType::class, [
+                'help' => 'Event description (Markdown enabled)', 
+                'attr' => ['rows' => 12]
+            ])
             ->add('organizer', TextType::class)
             ->add('save', SubmitType::class, ['label' => 'Create Event'])
             ->getForm();
