@@ -1,15 +1,11 @@
 <?php
 namespace App\Tests\Util;
 
-use App\Entity\Event;
 use PHPUnit\Framework\TestCase;
 
-class UuidStub {
-	public static $index = 0;
-	static function uuid4() {
-		return ++self::$index;
-	}
-}
+use App\Tests\Stubs\UuidStub;
+use App\Entity\Event;
+
 
 class EntityTest extends TestCase
 {
