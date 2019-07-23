@@ -1,0 +1,9 @@
+{% embed "components/content-article.html.twig" %}
+	{% block content %}
+		{{ comment.getMessage() }}
+	{% endblock %}
+
+	{% block footer %}
+		<p>Guest: {{ comment.getAuthor() }}</p>
+	{% endblock %}
+{% endembed %}

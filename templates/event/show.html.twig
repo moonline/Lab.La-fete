@@ -1,22 +1,27 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+	{% embed "components/event.html.twig" with {
+		event: event
+	} %}{% endembed %}
+
 	{% embed "components/content-article.html.twig" %}
 		{% block title %}
-			{{ event.getTitle() }}
-			{% embed "components/email-link.html.twig" with {
-				subject: 'Invitation ' ~ event.getTitle(),
-				body: 'You are invited to "' ~ event.getTitle() ~ '"%0D%0ASubscribe on http://events.tld/events/' ~ event.getId(),
-				label: 'Send link'
-			} %}{% endembed %}
+			Comments
 		{% endblock %}
 
 		{% block content %}
-			{{ event.getFormattedDescription() | raw }}
-		{% endblock %}
+			{% embed "components/content-article.html.twig" %}
+				{% block content %}
+					{{ form(commentForm) }}
+				{% endblock %}
+			{% endembed %}
 
-		{% block footer %}
-			<p>Organizer: {{ event.getOrganizer() }}</p>
+			{% for comment in event.getComments() %}
+				{% embed "components/comment.html.twig" with {
+					comment: comment
+				} %}{% endembed %}
+			{% endfor %}
 		{% endblock %}
 	{% endembed %}
 {% endblock %}

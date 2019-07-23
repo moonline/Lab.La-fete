@@ -4,9 +4,11 @@
 
 
 <article class="panel content-article">
+	{% if block('title') %}
 	<header class="panel-heading">
 		<h2>{% block title %}{% endblock %}</h2>
 	</header>
+	{% endif %}
 
 	<div class="panel-body">
 		{% block content %}{% endblock %}

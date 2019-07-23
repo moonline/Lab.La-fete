@@ -12,6 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\ORM\EntityManagerInterface;
 
 use App\Entity\Event;
+use App\Entity\Comment;
 
 class EventController extends AbstractController
 {
@@ -32,32 +33,52 @@ class EventController extends AbstractController
             ->add('save', SubmitType::class, ['label' => 'Create Event'])
             ->getForm();
 
-            $form->handleRequest($request);
-            if ($form->isSubmitted() && $form->isValid()) {
-                $event = $form->getData();
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $event = $form->getData();
 
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($event);
-                $entityManager->flush();
-        
-                return $this->redirectToRoute('event_show', array(
-                    'id' => $event->getId()
-                ));
-            }
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($event);
+            $entityManager->flush();
+    
+            return $this->redirectToRoute('event_show', array(
+                'id' => $event->getId()
+            ));
+        }
 
-            return $this->render('event/new.html.twig', [
-                'form' => $form->createView(),
-            ]);    
+        return $this->render('event/new.html.twig', [
+            'form' => $form->createView(),
+        ]);    
             
     }
 
 	/**
      * @Route("/events/{id}", name="event_show")
      */
-    public function show(Event $event)
+    public function show(Request $request, Event $event)
     {
+        $comment = new Comment();
+        $comment->setEvent($event);
+        $commentForm = $this->createFormBuilder($comment)
+            ->add('author', TextType::class)
+            ->add('message', TextareaType::class, [
+                'attr' => ['rows' => 4]
+            ])
+            ->add('save', SubmitType::class, ['label' => 'Post comment'])
+            ->getForm();
+
+        $commentForm->handleRequest($request);
+        if ($commentForm->isSubmitted() && $commentForm->isValid()) {
+            $comment = $commentForm->getData();
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($comment);
+            $entityManager->flush();
+        }
+
         return $this->render('event/show.html.twig', [
             'event' => $event,
+            'commentForm' => $commentForm->createView()
         ]);
     }
 }
