@@ -1,12 +1,26 @@
 # La Fete Webapp
 
-![](documentation/event.png)
+
+<img src="./documentation/create-event.png" title="Create event" height="300"/>&nbsp;
+<img src="./documentation/event.png" title="Event" height="300"/>&nbsp;
+<img src="./documentation/event-invitation.png" title="Event" height="300"/>
+
+
+
+<img src="https://www.php.net/images/logos/php-logo.svg" title="PHP" height="50"/>
+<img src="https://symfony.com/images/logos/header-logo.svg" title="Symfony" height="50"/>
+<img src="https://www.doctrine-project.org/images/doctrine-logo.svg" title="Doctrine" height="50"/>
+<img src="https://www.sqlite.org/images/sqlite370_banner.gif" title="SQLite" height="50"/>
+<img src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" title="Bootstrap" height="50"/>
+<img src="https://twig.symfony.com/images/logo.png" title="Twig" height="50"/>
 
 
 ## Project documentation
 
-* [Architecture, wireframes](https://github.com/moonline/la-fete/wiki)
-* [Issues](https://github.com/moonline/la-fete/issues)
+* [Architecture](https://github.com/moonline/la-fete/wiki/Architecture)
+* [Wireframes](https://github.com/moonline/la-fete/wiki/Wireframes)
+* [User Stories](https://github.com/moonline/la-fete/issues?utf8=%E2%9C%93&q=label%3A%22type%3Astory%22)
+* [All open issues](https://github.com/moonline/la-fete/issues)
 
 
 ## Development
