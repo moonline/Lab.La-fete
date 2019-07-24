@@ -6,13 +6,14 @@
 <img src="./documentation/event-invitation.png" title="Event" height="300"/>
 
 
-
-<img src="https://www.php.net/images/logos/php-logo.svg" title="PHP" height="50"/>
-<img src="https://symfony.com/images/logos/header-logo.svg" title="Symfony" height="50"/>
-<img src="https://www.doctrine-project.org/images/doctrine-logo.svg" title="Doctrine" height="50"/>
-<img src="https://www.sqlite.org/images/sqlite370_banner.gif" title="SQLite" height="50"/>
-<img src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" title="Bootstrap" height="50"/>
-<img src="https://twig.symfony.com/images/logo.png" title="Twig" height="50"/>
+<p>
+<img src="https://www.php.net/images/logos/php-logo.svg" title="PHP" height="30"/>
+<img src="https://symfony.com/images/logos/header-logo.svg" title="Symfony" height="30"/>
+<img src="https://www.doctrine-project.org/images/doctrine-logo.svg" title="Doctrine" height="30"/>
+<img src="https://www.sqlite.org/images/sqlite370_banner.gif" title="SQLite" height="30"/>
+<img src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" title="Bootstrap" height="30"/>
+<img src="https://twig.symfony.com/images/logo.png" title="Twig" height="30"/>
+</p>
 
 
 ## Project documentation
