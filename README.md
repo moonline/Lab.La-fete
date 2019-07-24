@@ -1,10 +1,13 @@
-# La Fete Webapp
+# La Fete Event Organizer
 
 
 <img src="./documentation/create-event.png" title="Create event" height="300"/>&nbsp;
 <img src="./documentation/event.png" title="Event" height="300"/>&nbsp;
 <img src="./documentation/event-invitation.png" title="Event" height="300"/>
 
+La Fete allows event organizers to create events and send them to their guests. Markdown can be used to format the event description.
+Guests can leave comments, to inform about their participation and if they support the preparations.
+Organizers as like as guests do not need to create an account, they access the event by a unique url.
 
 <p>
 <img src="https://www.php.net/images/logos/php-logo.svg" title="PHP" height="30"/>
