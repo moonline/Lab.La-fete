@@ -1,8 +1,9 @@
 doctrine:
     dbal:
         # configure these for your database server
-        driver: 'pdo_sqlite'
+        driver: 'pdo_%env(DATABASE_TYPE)%'
         url: '%env(resolve:DATABASE_URL)%'
+        charset: UTF8
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
